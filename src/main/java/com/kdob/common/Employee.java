@@ -1,16 +1,27 @@
 package com.kdob.common;
 
+import java.util.List;
+
 public class Employee {
     private String name;
     private String department;
     private double salary;
     private int age;
+    private List<String> skills;
 
     public Employee(String name, String department, double salary, int age) {
         this.name = name;
         this.department = department;
         this.salary = salary;
         this.age = age;
+    }
+
+    public Employee(final String name, final String department, final double salary, final int age, final List<String> skills) {
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+        this.age = age;
+        this.skills = skills;
     }
 
     public String getName() {
@@ -45,6 +56,14 @@ public class Employee {
         this.age = age;
     }
 
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(final List<String> skills) {
+        this.skills = skills;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -52,6 +71,7 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 ", age=" + age +
+                ", skills=" + skills +
                 '}';
     }
 }
